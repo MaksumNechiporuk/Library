@@ -120,7 +120,9 @@
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Library.cpp" />
+    <ClCompile Include="magazine.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Newspaper.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
