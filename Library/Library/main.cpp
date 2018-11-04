@@ -105,6 +105,8 @@ struct client
 	Date DoB;
 	int numberbook = 0;
 	book *b = new book[numberbook];
+	string sn[6] = { "Бондаренко", "Мельник", "Шевченко", "Ткаченко", "Коваленко", "Бойко" };
+	string n[6] = { "Олексій", "Олександр", "Максим", "Борис", "Юрій", "Владислав" };
 };
 struct  source
 {
