@@ -2,7 +2,6 @@
 #include<ctime>
 #include<iomanip>
 #include<string>
-#include<time.h>
 
 using namespace std;
 
@@ -14,6 +13,12 @@ struct Date
 	int mouth;
 	int year;
 	void Fill_data(int min, int max)
+	{
+		day = 1 + rand() % 30;
+		mouth = 1 + rand() % 11;
+		year = min + rand() % (max - min);
+	}
+	void Fill_data_book(int min, int max)
 	{
 		day = 1 + rand() % 30;
 		mouth = 1 + rand() % 11;
@@ -33,19 +38,50 @@ struct book
 	int number;
 	string genre;//enum  
 	bool status;
+	void Fill_newspaper()
+	{
+		string names[10] = { " HINDUSTAN TIMES","THE SUN","NEW YORK TIMES","TIMES OF INDIA","SPIEGEL","WALL STREET JOURNAL","JAPAN TODAY"," PRESSE"," WASHINGTON POST","USA TODAY" };
+		name = names[rand() % 10];
+		int a = rand() % 10;
+		if (a == 0)
+		{
+			number = 0;
+			status = false;
+		}
+		else
+		{
+
+			number = 1 + rand() % 100;
+			status = true;
+		}
+		string genres[6] = { "Детективний","Духовний","Історичний","Пригодницький","науково-фантастичний","Роман" };
+		genre = genres[rand() % 6];
+	}
 	void Fill_book()
 	{
 		string names[10] = { " На Західному фронті без змін","Улісс","Оповідання, романи, листи, щоденники","Гамлет","Портрет Доріана Грея","Кохання під час холери","Українські повісті"," Пригоди бравого вояка Швейка","Вигадані історії","1984" };
 		name = names[rand() % 10];
+		int a = rand() % 10;
+		if (a == 0)
+		{
+			number = 0;
+			status = false;
+		}
+		else
+		{
 
+			number = 1 + rand() % 100;
+			status = true;
+		}
+		string genres[6] = { "Детективний","Духовний","Історичний","Пригодницький","Науково-фантастичний","Роман" };
+		genre = genres[rand() % 6];
 	}
-
 };
 struct author
 {
 	string name;
 	string surname;
-	int size_book = 0;
+	int size_book = 1;
 	book *mybook = new book[size_book];
 	void Fill_author()
 	{
@@ -53,7 +89,7 @@ struct author
 		string surnames[10] = { "Орвелл","Луїс","Гашек","Гоголь","Ґарсія","Вайлд","Шекспір","Кафка","Джойс","Марія" };
 		name = names[rand() % 10];
 		surname = surnames[rand() % 10];
-		size_book++;
+		
 
 	}
 	void Show_author()
