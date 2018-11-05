@@ -1,10 +1,11 @@
+#pragma once
 #include<iostream>
 #include<ctime>
 #include<iomanip>
 #include<string>
-#include"Client.cpp"
-#include"Author.cpp"
-#include"Source.cpp"
+#include"Client.h"
+#include"Author.h"
+#include"Source.h"
 
 using namespace std;
 

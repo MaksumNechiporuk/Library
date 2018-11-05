@@ -1,9 +1,10 @@
+#pragma once
 #include<iostream>
 #include<ctime>
 #include<iomanip>
 #include<string>
-#include"book.cpp"
-#include "Date.cpp"
+#include"book.h"
+#include "Date.h"
 
 using namespace std;
 

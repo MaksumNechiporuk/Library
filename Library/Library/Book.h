@@ -1,8 +1,9 @@
+#pragma once
 #include<iostream>
 #include<ctime>
 #include<iomanip>
 #include<string>
-#include "Date.cpp"
+#include "Date.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ struct book
 	int number;
 	string genre;//enum  
 	bool status;
-	
+
 	void Fill_book()
 	{
 		string names[10] = { " На Західному фронті без змін","Улісс","Оповідання, романи, листи, щоденники","Гамлет","Портрет Доріана Грея","Кохання під час холери","Українські повісті"," Пригоди бравого вояка Швейка","Вигадані історії","1984" };
@@ -32,7 +33,7 @@ struct book
 		}
 		string genres[6] = { "Детективний","Духовний","Історичний","Пригодницький","Науково-фантастичний","Роман" };
 		genre = genres[rand() % 6];
-		d.Fill_data(1960,2018);
+		d.Fill_data(1960, 2018);
 
 	}
 };

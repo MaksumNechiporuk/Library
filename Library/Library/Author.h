@@ -1,11 +1,12 @@
+#pragma once
 #include<iostream>
 #include<ctime>
 #include<iomanip>
 #include<string>
-#include"book.cpp"
-#include "Date.cpp"
-#include"magazine.cpp"
-#include "Newspaper.cpp"
+#include"book.h"
+#include "Date.h"
+#include"magazine.h"
+#include "Newspaper.h"
 
 using namespace std;
 
@@ -38,7 +39,7 @@ struct author_magazine
 	string name;
 	string surname;
 	int size_magazine = 1;
-	magazine *my_magazine= new magazine[size_magazine];
+	magazine *my_magazine = new magazine[size_magazine];
 	void Fill_author_magazine()
 	{
 		string names[10] = { "Ерих","Джеймс","Франц","Вільям","Оскар","Ґабріель","Микола","Ярослав","Хорхе","Джордж" };

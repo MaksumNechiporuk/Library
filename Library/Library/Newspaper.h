@@ -1,20 +1,21 @@
+#pragma once
 #include<iostream>
 #include<ctime>
 #include<iomanip>
 #include<string>
-#include "Date.cpp"
+#include "Date.h"
 using namespace std;
 
-struct magazine
+struct Newspaper
 {
 	string name;
 	Data d;
 	int number;
 	string genre;//enum  
 	bool status;
-	void Fill_magasine()
+	void Fill_newspaper()
 	{
-		string names[10] = { "Vogue","Elle","Harper`s Bazaar","Marie Claire","Glamour","Numero","Dazed"," InStyle","L’Officiel","Purple Fashion" };
+		string names[10] = { " HINDUSTAN TIMES","THE SUN","NEW YORK TIMES","TIMES OF INDIA","SPIEGEL","WALL STREET JOURNAL","JAPAN TODAY"," PRESSE"," WASHINGTON POST","USA TODAY" };
 		name = names[rand() % 10];
 		int a = rand() % 10;
 		if (a == 0)
@@ -34,6 +35,3 @@ struct magazine
 
 	}
 };
-
-
-

@@ -2,33 +2,28 @@
 #include<ctime>
 #include<iomanip>
 #include<string>
-#include"book.cpp"
-#include"Client.cpp"
-#include"Author.cpp"
-#include"Source.cpp"
-#include"Library.cpp"
+#include"Book.h"
+#include"Client.h"
+#include"Author.h"
+#include"Source.h"
+#include"Library.h"
+
 using namespace std;
-
-int sizebook = 10, sizesource = 3, sizeclient = 10, sizeauthor = 10;
-
-
-
-
-
-
-
 
 int main()
 {
 	srand(time(0));
 	setlocale(LC_ALL, "ukr");
 	library test;
-	for (int i = 0; i < sizeauthor; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		test.a[i].Fill_author();
 		test.a[i].Show_author();
 	}
-	test.
-
+	source s;
+	cout << endl;
+	s.b = test.a.mybook;
+	cout << s.b[0].name << endl;
+	cout << test.a[0].mybook[0].name << endl;
 	system("pause");
 }
