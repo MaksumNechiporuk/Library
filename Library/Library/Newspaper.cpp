@@ -5,10 +5,10 @@
 #include "Date.cpp"
 using namespace std;
 
-struct book
+struct Newspaper
 {
 	string name;
-	Date d;
+	Data d;
 	int number;
 	string genre;//enum  
 	bool status;
@@ -30,5 +30,7 @@ struct book
 		}
 		string genres[6] = { "Інформаційний","Спортивний","Науковий","Розважальний","Дитячий","Галузевий" };
 		genre = genres[rand() % 6];
+		d.Fill_data(1960, 2018);
+
 	}
 };

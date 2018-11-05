@@ -5,16 +5,16 @@
 #include "Date.cpp"
 using namespace std;
 
-struct book
+struct magazine
 {
 	string name;
-	Date d;
+	Data d;
 	int number;
 	string genre;//enum  
 	bool status;
-	void Fill_newspaper()
+	void Fill_magasine()
 	{
-		string names[10] = { " HINDUSTAN TIMES","THE SUN","NEW YORK TIMES","TIMES OF INDIA","SPIEGEL","WALL STREET JOURNAL","JAPAN TODAY"," PRESSE"," WASHINGTON POST","USA TODAY" };
+		string names[10] = { "Vogue","Elle","Harper`s Bazaar","Marie Claire","Glamour","Numero","Dazed"," InStyle","L’Officiel","Purple Fashion" };
 		name = names[rand() % 10];
 		int a = rand() % 10;
 		if (a == 0)
@@ -30,6 +30,8 @@ struct book
 		}
 		string genres[6] = { "Інформаційний","Спортивний","Науковий","Розважальний","Дитячий","Галузевий" };
 		genre = genres[rand() % 6];
+		d.Fill_data(1960, 2018);
+
 	}
 };
 

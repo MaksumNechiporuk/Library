@@ -12,6 +12,6 @@ struct library
 {
 	source *s = new source[sizesource];
 	client *cl = new client[sizeclient];
-	author *a = new  author[sizeauthor];
+	author_book *a = new  author_book[sizeauthor];
 
 };

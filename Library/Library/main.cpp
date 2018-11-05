@@ -28,6 +28,7 @@ int main()
 		test.a[i].Fill_author();
 		test.a[i].Show_author();
 	}
+	test.
 
 	system("pause");
 }

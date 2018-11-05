@@ -11,5 +11,7 @@ struct  source
 {
 	string sources;
 	book *b = new book[sizebook];
+	magazine *b = new magazine[sizebook];
+	newspaper *b = new newspaper[sizebook];
 };
 

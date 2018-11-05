@@ -3,12 +3,13 @@
 #include<iomanip>
 #include<string>
 #include "Date.cpp"
+
 using namespace std;
 
 struct book
 {
 	string name;
-	Date d;
+	Data d;
 	int number;
 	string genre;//enum  
 	bool status;
@@ -31,5 +32,7 @@ struct book
 		}
 		string genres[6] = { "Детективний","Духовний","Історичний","Пригодницький","Науково-фантастичний","Роман" };
 		genre = genres[rand() % 6];
+		d.Fill_data(1960,2018);
+
 	}
 };

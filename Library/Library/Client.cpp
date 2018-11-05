@@ -7,13 +7,11 @@
 
 using namespace std;
 
-
-
 struct client
 {
 	string name;
 	string surname;
-	Date DoB;
+	Data DoB;
 	int numberbook = 0;
 	book *b = new book[numberbook];
 	void Fill_client()

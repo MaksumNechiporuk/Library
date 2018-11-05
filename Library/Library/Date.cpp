@@ -4,7 +4,7 @@
 #include<string>
 using namespace std;
 
-struct Date
+struct Data
 {
 	int day;
 	int mouth;
