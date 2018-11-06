@@ -14,16 +14,33 @@ int main()
 {
 	srand(time(0));
 	setlocale(LC_ALL, "ukr");
-	library test;
-	for (int i = 0; i < 10; i++)
+	library l;
+	for (int i = 0; i < 1; i++)
 	{
-		test.a[i].Fill_author();
-		test.a[i].Show_author();
+		for (int j = 0; j < sizebook; j++)
+		{
+			l.a[j].Fill_author();
+			l.m[j].Fill_author_magazine();
+			l.n[j].Fill_author_magazine();
+			l.books.b[j]=l.a[j].mybook[i];
+			l.magazine.m[j] = l.m[j].my_magazine[i];
+			l.newspaper.n[j] = l.n[j].my_newspaper[i];
+		}
 	}
-	source s;
-	cout << endl;
-	s.b = test.a.mybook;
-	cout << s.b[0].name << endl;
-	cout << test.a[0].mybook[0].name << endl;
+		for (int j = 0; j < sizebook; j++)
+		{
+			cout << l.books.b[j].name << endl;
+			cout << l.magazine.m[j].name<<endl;
+				cout<<l.newspaper.n[j].name<<endl;
+		}
+		cout << endl;
+		for (int i = 0; i < 1; i++)
+		for (int j = 0; j < sizebook; j++)
+		{
+			cout << l.a[j].mybook[i].name << endl;
+			cout << l.m[j].my_magazine[i].name << endl;
+			cout << l.n[j].my_newspaper[i].name << endl;
+		}
+
 	system("pause");
 }

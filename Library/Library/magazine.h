@@ -25,14 +25,12 @@ struct magazine
 		}
 		else
 		{
-
 			number = 1 + rand() % 50;
 			status = true;
 		}
 		string genres[6] = { "Інформаційний","Спортивний","Науковий","Розважальний","Дитячий","Галузевий" };
 		genre = genres[rand() % 6];
 		d.Fill_data(1960, 2018);
-
 	}
 };
 

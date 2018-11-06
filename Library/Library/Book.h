@@ -27,13 +27,11 @@ struct book
 		}
 		else
 		{
-
 			number = 1 + rand() % 100;
 			status = true;
 		}
 		string genres[6] = { "Детективний","Духовний","Історичний","Пригодницький","Науково-фантастичний","Роман" };
 		genre = genres[rand() % 6];
 		d.Fill_data(1960, 2018);
-
 	}
 };
